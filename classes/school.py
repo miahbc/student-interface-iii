@@ -16,3 +16,17 @@ class School:
         for student in self.students:
             if student.school_id == student_id:
                 return student
+
+    def add_student(self, student_data):
+        new_student = Student(student_data['name'],student_data['age'],student_data['password'],student_data['role'],student_data['school_id'])
+        self.students.append(new_student)
+        return self.list_students()
+
+    def delete_student(self,student_id):
+        for i,student in enumerate(self.students):
+            if student.school_id == student_id:
+                self.students.remove(self.students[i])
+                return self.list_students()
+                
+    
+# name, age, password, role, school_id

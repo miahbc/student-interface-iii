@@ -10,6 +10,9 @@ class Student(Person):
 
     def __str__(self):
         return f'\n{self.name.upper()}\n---------------\nage: {self.age}\nid: {self.school_id}\n'
+    
+    # def add_student(self,)
+    
 
     @classmethod
     def objects(cls):
